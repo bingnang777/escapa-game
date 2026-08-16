@@ -1,10 +1,5 @@
 <!DOCTYPE HTML>
-<html><head><meta charset="UTF-8"><title>Eskappa</title><style>html,head,body { padding:0; margin:0; width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: calibri, helvetica, arial, sans-serif;}
+<html><head><meta charset="UTF-8"><title>Eskappa</title><style>html,head,body { padding:0; margin:0; }
 body { font-family: calibri, helvetica, arial, sans-serif; }</style><script type="text/javascript">
 (function() {
 'use strict';
@@ -12480,51 +12475,7 @@ for (var publicModule in Elm)
 }
 
 }).call(this);
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<style>
-    html, body {
-        margin: 0; padding: 0; width: 100%; height: 100%;
-        display: flex; justify-content: center; align-items: center;
-        background: #1a1a2e; overflow: hidden; touch-action: none;
-    }
-    canvas { display: block; max-width: 100%; max-height: 100%; touch-action: none; }
-</style>
-</script></head><body>
-
-<script type="text/javascript">Elm.Eskappa.fullscreen()</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    var canvas = document.querySelector('canvas');
-    if (!canvas) return;
-
-    canvas.addEventListener('touchstart', function(e) {
-        e.preventDefault();
-        var touch = e.touches[0];
-        var mouseEvent = new MouseEvent('mousedown', {
-            clientX: touch.clientX,
-            clientY: touch.clientY
-        });
-        canvas.dispatchEvent(mouseEvent);
-    });
-
-    canvas.addEventListener('touchmove', function(e) {
-        e.preventDefault();
-        var touch = e.touches[0];
-        var mouseEvent = new MouseEvent('mousemove', {
-            clientX: touch.clientX,
-            clientY: touch.clientY
-        });
-        canvas.dispatchEvent(mouseEvent);
-    });
-
-    canvas.addEventListener('touchend', function(e) {
-        e.preventDefault();
-        var mouseEvent = new MouseEvent('mouseup', {});
-        canvas.dispatchEvent(mouseEvent);
-    });
-});
-</script>
+</script></head><body><script type="text/javascript">Elm.Eskappa.fullscreen()</script></body></html>
 <script>
 setTimeout(function() {
     var c = document.querySelector('canvas');
@@ -12534,5 +12485,3 @@ setTimeout(function() {
     c.addEventListener('touchend', function(e) { e.preventDefault(); c.dispatchEvent(new MouseEvent('mouseup', {})); }, {passive: false});
 }, 500);
 </script>
-</body>
-</html>
