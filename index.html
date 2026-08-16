@@ -11855,7 +11855,7 @@ var _hcsch$eskappa$Utils$elMul = F2(
 			_elm_community$linear_algebra$Math_Vector2$getY(v1) * _elm_community$linear_algebra$Math_Vector2$getY(v2));
 	});
 var _hcsch$eskappa$Game$speedMultiplier = function (elapsedTime) {
-	return (_elm_lang$core$Native_Utils.cmp(elapsedTime, 8 * _elm_lang$core$Time$second) < 0) ? 1 : ((_elm_lang$core$Native_Utils.cmp(elapsedTime, 14 * _elm_lang$core$Time$second) < 0) ? (1 + (1 / 3)) : ((_elm_lang$core$Native_Utils.cmp(elapsedTime, 18 * _elm_lang$core$Time$second) < 0) ? 2 : ((_elm_lang$core$Native_Utils.cmp(elapsedTime, 21 * _elm_lang$core$Time$second) < 0) ? (2 + (2 / 3)) : ((_elm_lang$core$Native_Utils.cmp(elapsedTime, 23 * _elm_lang$core$Time$second) < 0) ? 4 : 8))));
+	return (_elm_lang$core$Native_Utils.cmp(elapsedTime, 8 * _elm_lang$core$Time$second) < 0) ? 0.5 : ((_elm_lang$core$Native_Utils.cmp(elapsedTime, 14 * _elm_lang$core$Time$second) < 0) ? (0.5 + (1 / 6)) : ((_elm_lang$core$Native_Utils.cmp(elapsedTime, 18 * _elm_lang$core$Time$second) < 0) ? 1 : ((_elm_lang$core$Native_Utils.cmp(elapsedTime, 21 * _elm_lang$core$Time$second) < 0) ? (1 + (1 / 3)) : ((_elm_lang$core$Native_Utils.cmp(elapsedTime, 23 * _elm_lang$core$Time$second) < 0) ? 2 : 4))));
 };
 var _hcsch$eskappa$Game$hit = F2(
 	function (p, e) {
