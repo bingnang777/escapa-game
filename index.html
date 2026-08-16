@@ -12375,11 +12375,11 @@ var _hcsch$eskappa$Eskappa$view = function (model) {
 							_0: _elm_lang$html$Html$text(
 								A2(
 									_elm_lang$core$Basics_ops['++'],
-									'Current time: ',
+									'当前时间: ',
 									model.game.running ? A2(
 										_elm_lang$core$Basics_ops['++'],
 										_elm_lang$core$Basics$toString(model.game.elapsedTime / _elm_lang$core$Time$second),
-										's') : 'not running')),
+										's') : '未开始')),
 							_1: {ctor: '[]'}
 						}),
 					_1: {
@@ -12392,7 +12392,7 @@ var _hcsch$eskappa$Eskappa$view = function (model) {
 								_0: _elm_lang$html$Html$text(
 									A2(
 										_elm_lang$core$Basics_ops['++'],
-										'Personal highscore: ',
+										'最高分: ',
 										A2(
 											_elm_lang$core$Basics_ops['++'],
 											_elm_lang$core$Basics$toString(
@@ -12407,7 +12407,7 @@ var _hcsch$eskappa$Eskappa$view = function (model) {
 								{ctor: '[]'},
 								{
 									ctor: '::',
-									_0: _elm_lang$html$Html$text('Previous times:'),
+									_0: _elm_lang$html$Html$text('挑战次数:'),
 									_1: {
 										ctor: '::',
 										_0: A2(
