@@ -12496,11 +12496,26 @@ for (var publicModule in Elm)
 }).call(this);
 </script></head><body><script type="text/javascript">Elm.Eskappa.fullscreen()</script></body></html>
 <script>
-setTimeout(function() {
+(function tryTouch() {
     var c = document.querySelector('canvas');
-    if (!c) return;
-    c.addEventListener('touchstart', function(e) { e.preventDefault(); var t = e.touches[0]; c.dispatchEvent(new MouseEvent('mousedown', {clientX: t.clientX, clientY: t.clientY})); }, {passive: false});
-    c.addEventListener('touchmove', function(e) { e.preventDefault(); var t = e.touches[0]; c.dispatchEvent(new MouseEvent('mousemove', {clientX: t.clientX, clientY: t.clientY})); }, {passive: false});
-    c.addEventListener('touchend', function(e) { e.preventDefault(); c.dispatchEvent(new MouseEvent('mouseup', {})); }, {passive: false});
-}, 500);
+    if (!c) {
+        setTimeout(tryTouch, 200);
+        return;
+    }
+    c.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        var t = e.touches[0];
+        c.dispatchEvent(new MouseEvent('mousedown', {clientX: t.clientX, clientY: t.clientY}));
+    }, {passive: false});
+    c.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+        var t = e.touches[0];
+        c.dispatchEvent(new MouseEvent('mousemove', {clientX: t.clientX, clientY: t.clientY}));
+    }, {passive: false});
+    c.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        c.dispatchEvent(new MouseEvent('mouseup', {}));
+    }, {passive: false});
+    console.log('触控已绑定');
+})();
 </script>
