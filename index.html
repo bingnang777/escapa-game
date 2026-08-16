@@ -12480,4 +12480,42 @@ for (var publicModule in Elm)
 }
 
 }).call(this);
-</script></head><body><script type="text/javascript">Elm.Eskappa.fullscreen()</script></body></html>
+</script></head><body>
+
+<script type="text/javascript">Elm.Eskappa.fullscreen()</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var canvas = document.querySelector('canvas');
+    if (!canvas) return;
+
+    canvas.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        var touch = e.touches[0];
+        var mouseEvent = new MouseEvent('mousedown', {
+            clientX: touch.clientX,
+            clientY: touch.clientY
+        });
+        canvas.dispatchEvent(mouseEvent);
+    });
+
+    canvas.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+        var touch = e.touches[0];
+        var mouseEvent = new MouseEvent('mousemove', {
+            clientX: touch.clientX,
+            clientY: touch.clientY
+        });
+        canvas.dispatchEvent(mouseEvent);
+    });
+
+    canvas.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        var mouseEvent = new MouseEvent('mouseup', {});
+        canvas.dispatchEvent(mouseEvent);
+    });
+});
+</script>
+
+</body>
+</html>
